@@ -232,6 +232,9 @@ local Character,R15Offsets,Claim2Heartbeat
 
 -- Storing the Velocity Variable for netless, needed because dynamic velocity and movement velocity
 local Velocity = Vector3.new(getgenv.Velocity, getgenv.Velocity, getgenv.Velocity)
+if not getgenv.ExtremeNetless then
+	Velocity = Vector3.new(20,0,0)	
+end
 
 -- Setting Sim Radius, useful for claiming parts
 if getgenv.Network then
